@@ -27,6 +27,11 @@ except Exception as e:
 # -------------------------------
 # 2️⃣ /predict route
 # -------------------------------
+
+@app.route("/")
+def home():
+    return "Study Hours Prediction API is Live 🚀"
+
 @app.route('/predict', methods=['POST'])
 def predict():
     try:

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Hours Predictor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Smart Study Hours Predictor</h1>
+            <p></p>
+        </div>
+        
+        <div class="form-container">
+            <form id="predictionForm">
+                <div class="form-group">
+                    <label for="past_score">Past Score</label>
+                    <input type="number" id="past_score" placeholder="Enter your previous score" min="0" max="100" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subjects">Number of Subjects</label>
+                    <input type="number" id="subjects" placeholder="How many subjects?" min="1" max="10" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="last_week_hours">Last Week Study Hours</label>
+                    <input type="number" id="last_week_hours" placeholder="Hours studied last week" min="0" max="50" step="0.1" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="stress_level">Stress Level (1-5)</label>
+                    <input type="number" id="stress_level" placeholder="1=Low, 5=High" min="1" max="5" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="sleep_hours">Sleep Hours (per day)</label>
+                    <input type="number" id="sleep_hours" placeholder="Average sleep hours" min="0" max="12" step="0.1" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="target_score">Target Score</label>
+                    <input type="number" id="target_score" placeholder="Your goal score" min="0" max="100" required>
+                </div>
+                
+                <button type="submit" class="submit-btn">Predict Study Hours</button>
+            </form>
+            
+            <div class="error-message" id="errorMessage"></div>
+            
+            <div class="result-container">
+                <h2>Recommended Study Hours<br>
+                </h2>
+                <div id="result">--.--</div>
+            </div>
+           
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

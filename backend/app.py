@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, send_file
+from flask import Flask, request, jsonify,render_template
 from flask_cors import CORS
 import joblib
 import numpy as np
@@ -30,7 +30,7 @@ except Exception as e:
 
 @app.route("/")
 def home():
-    return "Study Hours Prediction API is Live 🚀"
+    return render_template("index.html")
 
 @app.route('/predict', methods=['POST'])
 def predict():

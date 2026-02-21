@@ -13,8 +13,10 @@ CORS(app)
 # -------------------------------
 # 1️⃣ Load model and scaler
 # -------------------------------
-MODEL_PATH = os.path.join(os.getcwd(), 'model.pkl')
-SCALER_PATH = os.path.join(os.getcwd(), 'scaler.pkl')
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+MODEL_PATH = os.path.join(BASE_DIR, 'model.pkl')
+SCALER_PATH = os.path.join(BASE_DIR, 'scaler.pkl')
 DATA_PATH = os.path.join(os.getcwd(), 'dataset', 'study_hours.csv')
 
 try:
@@ -55,6 +57,6 @@ def predict():
 # -------------------------------
 # 4️⃣ Run Flask app
 # -------------------------------
-import os
+
 
 
